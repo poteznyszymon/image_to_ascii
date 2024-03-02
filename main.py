@@ -44,14 +44,8 @@ def make_ascii(width, height):
 
 
 def main():
-    if sys.argv[1] == 'konon':
-        photo = Image.open('konon.jpg')
-    elif sys.argv[1] == 'mona':
-        photo = Image.open('mona.jpg')
-    elif sys.argv[1] == 'jasper':
-        photo = Image.open('jasper.jpg')
-    elif sys.argv[1] == 'pudzian':
-        photo = Image.open('pudzian.jpg')
+    # usage in terminal type: python main.py name_of_photo.jpg
+    photo = Image.open(f'{sys.argv[1]}')
     photo = turn_into_grey(photo)
     width = photo.size[0]
     height = photo.size[1]
